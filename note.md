@@ -1,6 +1,10 @@
 https://developer.wordpress.org/files/2014/10/Screenshot-2019-01-23-00.20.04.png
 https://drive.google.com/drive/folders/1uF_fykYW0LPvnMUVE9NmxC6Thjrtx6zi?usp=sharing
+https://gist.github.com/thachpham92/d57b18cf02e3550acdb5
+http://aglstaff.allgrow-labo.jp/hosyhuy/task13/topics/
+http://aglstaff.allgrow-labo.jp/nguyenthanhquy/shimohira/#
 http://localhost/shimodaira/
+http://localhost/shimodaira/wp-admin/profile.php
 
 [Training bồi dưỡng kỹ năng nghiệp vụ](./_training_term_for_practical_standard-vn.md) > Chapter 02
 
