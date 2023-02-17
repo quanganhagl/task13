@@ -6,6 +6,9 @@ http://aglstaff.allgrow-labo.jp/nguyenthanhquy/shimohira/#
 vanthanhvu/wp01
 http://localhost/shimodaira/
 http://localhost/shimodaira/wp-admin/profile.php
+https://github.com/syhuyagl?tab=repositories
+
+tai xampp roi add shimodaira vao htdocs cua link thu muc goc cua xampp
 
 [Training bồi dưỡng kỹ năng nghiệp vụ](./_training_term_for_practical_standard-vn.md) > Chapter 02
 
