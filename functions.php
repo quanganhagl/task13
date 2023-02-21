@@ -48,3 +48,43 @@ if (!function_exists('basic_theme_setup')) {
     }
     add_action('init', 'basic_theme_setup');
 }
+
+//phan trang
+function custom_pagination($pages = '', $range = 2, $topics)
+{
+    $showitems = ($range * 2) + 1;
+
+    global $paged;
+    if (empty($paged))
+        $paged = 1;
+    if ($pages == '') {
+        $pages = $topics->max_num_pages;
+        if (!$pages) {
+            $pages = 1;
+        }
+    }
+
+    if (1 != $pages) {
+        if ($paged > 1)
+            echo "<a class='prev' href='" . get_pagenum_link($paged - 1) . "'></a>";
+
+        for ($i = 1; $i <= $pages; $i++) {
+            if (1 != $pages && (!($i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems)) {
+                echo ($paged == $i) ? "<span class='current'>" . $i . "</span>" : "<a href='" . get_pagenum_link($i) . "' class='inactive' >" . $i . "</a>";
+            }
+        }
+
+        if ($paged < $pages)
+            echo "<a class='next' href='" . get_pagenum_link($paged + 1) . "'></a>";
+    }
+}
+
+// //only show child title
+// function remove_project_title($title)
+// {
+//     if (is_page()) {
+//         $title = get_the_title();
+//     }
+//     return $title;
+// }
+// add_filter("wp_title", "remove_project_title");

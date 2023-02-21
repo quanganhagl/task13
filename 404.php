@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: 404
+*/
+?>
 <?php get_header(); ?>
 <main>
     <div class="c-error">

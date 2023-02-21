@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Single
+*/
+?>
 <?php get_header(); ?>
 <main class="p-single">
     <div class="c-title c-title--page">
@@ -20,9 +25,9 @@
                     <?php $cat = get_the_category();
                     foreach ($cat as $cd) {
                     ?>
-                        <a href="<?php echo get_category_link($cd->term_id); ?>">
-                            <?php echo $cd->cat_name; ?>
-                        </a>
+                    <a href="<?php echo get_category_link($cd->term_id); ?>">
+                        <?php echo $cd->cat_name; ?>
+                    </a>
                     <?php } ?>
                 </p>
             </div>
@@ -30,7 +35,8 @@
 
             <!-- Post content start -->
             <div class="p-single__content">
-                <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'thumbnail'); ?>" alt="">
+                <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'thumbnail'); ?>"
+                    alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>">
                 <?php echo get_post_field('post_content', $post->ID); ?>
             </div>
             <!-- Post content end -->
@@ -40,11 +46,11 @@
                 <?php
                 $prev_post = get_previous_post();
                 if (!empty($prev_post)) : ?>
-                    <li class="prev_link"><a href="<?php echo get_permalink($prev_post->ID); ?>">Prev</a></li>
+                <li class="prev_link"><a href="<?php echo get_permalink($prev_post->ID); ?>">Prev</a></li>
                 <?php endif;
                 $next_post = get_next_post();
                 if (is_a($next_post, 'WP_Post')) { ?>
-                    <li class="next_link"><a href="<?php echo get_permalink($next_post->ID); ?>">Next</a></li>
+                <li class="next_link"><a href="<?php echo get_permalink($next_post->ID); ?>">Next</a></li>
                 <?php } ?>
             </ul>
             <!-- Prev Next Btn end -->

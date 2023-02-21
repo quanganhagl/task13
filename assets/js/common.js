@@ -16,3 +16,23 @@ $(document).ready(function () {
     });
   });
 });
+
+//make link active
+
+$(document).ready(function () {
+  // get the current page
+  var current = location.pathname.slice(12).replace("/", "");
+
+  // loop through all the links
+  $(".c-gnav li").each(function () {
+    var $this = $(this);
+    $this.click(function () {});
+    // remove the class active
+    $(this).removeClass("active");
+    // check if this link is the current path
+    if ($(this).attr("class") == current) {
+      // if it is, add the class active
+      $(this).closest("li").addClass("active");
+    }
+  });
+});

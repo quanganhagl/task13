@@ -274,6 +274,13 @@ body {
   border: 0;
   -webkit-box-shadow: 0;
   box-shadow: 0;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+#searchsubmit:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 .c-grouplink {
@@ -329,7 +336,7 @@ body {
 }
 
 .c-error__description {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 500;
 }
 
@@ -528,6 +535,47 @@ body {
 **********************************************************************************/
 .p-topics {
   padding-bottom: 50px;
+}
+
+.c-pnav a:hover,
+.c-pnav span.current,
+.c-topicnav a:hover,
+.c-topicnav span.current {
+  background-color: #90c132;
+  border: 1px solid #90c132;
+  display: inline-block;
+  line-height: 30px;
+  width: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.c-topicnav {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.c-topicnav > * {
+  margin-left: 5px;
+}
+
+.c-topicnav a {
+  display: inline-block;
+  line-height: 30px;
+  width: 30px;
+  background-color: #fff;
+  border: 1px solid #90c132;
+  text-align: center;
+}
+
+.c-topicnav a.prev:before {
+  content: "\f100";
+  font-family: "fontAwesome";
+}
+
+.c-topicnav a.next:before {
+  content: "\f101";
+  font-family: "fontAwesome";
 }
 
 .p-single__title {
