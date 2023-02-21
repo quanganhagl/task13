@@ -3,7 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-
+    <meta name="description" content="<?php if ( is_single() ) {
+        single_post_title('', true); 
+    } else {
+        wp_title();
+    }
+    ?>" />
 
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">
@@ -20,11 +25,17 @@
         <div class="l-container">
             <div class="c-header__top">
                 <div class="logo">
-                    <a href="<?php echo get_site_url(); ?>" class="u-defaulthover"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="税理士法人下平会計事務所"></a>
+                    <a href="<?php echo get_site_url(); ?>" class="u-defaulthover"><img
+                            src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png"
+                            alt="税理士法人下平会計事務所"></a>
                 </div>
                 <div class="contact">
-                    <a href="tel:+0442332811" class="c-header__hedtel u-defaulthover"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hed_tel.png" alt="044-233-2811"></a><br />
-                    <a href="<?php echo get_site_url(); ?>/enquiry"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hed_con_no.png" alt="Click here for email enquiry" class="js-imglink"></a>
+                    <a href="tel:+0442332811" class="c-header__hedtel u-defaulthover"><img
+                            src="<?php echo get_template_directory_uri(); ?>/assets/img/hed_tel.png"
+                            alt="044-233-2811"></a><br />
+                    <a href="<?php echo get_site_url(); ?>/enquiry"><img
+                            src="<?php echo get_template_directory_uri(); ?>/assets/img/hed_con_no.png"
+                            alt="Click here for email enquiry" class="js-imglink"></a>
 
                 </div>
             </div>
